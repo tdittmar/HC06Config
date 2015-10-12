@@ -17,6 +17,7 @@ Select an option from the menu presented on the serial console and then
 follow the instructions.
 
 ## Important notes:
-1. Please change the RXPIN and TXPIN according to your actual setup!
+1. Please change the RXPIN and TXPIN constants at the beginning of the sketch
+according to your actual setup!
 2. Please make sure to select "carriage return" (CR, `\r`) line ending for the
 serial monitor! Otherwise your inputs will not be recognized!
