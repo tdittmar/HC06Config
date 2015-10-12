@@ -16,5 +16,7 @@ interactively configure the options. The whole process is "menu guided":
 Select an option from the menu presented on the serial console and then 
 follow the instructions.
 
-**Please make sure to select "carriage return" (CR, `\r`) line ending for the
-serial monitor! Otherwise your inputs will not be recognized!**
+## Important notes:
+1. Please change the RXPIN and TXPIN according to your actual setup!
+2. Please make sure to select "carriage return" (CR, `\r`) line ending for the
+serial monitor! Otherwise your inputs will not be recognized!
