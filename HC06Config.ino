@@ -70,9 +70,9 @@ void setup()
   }
 
   // Output welcome message on the user's serial monitor
-  Serial.println(F("HC-06 Config v0.1"));
-  Serial.println(F("Copyright © 2015 dithosoft Software Solutions"));
-  Serial.println(F("---------------------------------------------"));
+  Serial.println(F("HC-06 Config v0.2"));
+  Serial.println(F("Copyright © 2015-16 dithosoft Software Solutions"));
+  Serial.println(F("------------------------------------------------"));
 
   // Let the user select the BAUD rate for his HC-06
   selectHC06BAUDRate();
@@ -106,7 +106,7 @@ void selectHC06BAUDRate()
   int choiceMade = userInput.toInt();
   if (choiceMade < 1 || choiceMade > 8)
   {
-    Serial.println(F("Invalid choice! Please chose a valid item."));
+    Serial.println(F("Invalid choice! Please choose a valid item."));
     goto input;
   }
 
@@ -256,7 +256,7 @@ void changeBTName()
     else
     {
       if (reply.length() < 2 || !reply.substring(0,2).equalsIgnoreCase(F("OK")))
-        Serial.println("Unexpected answer ('" + reply + "') to AT+PIN command!");
+        Serial.println("Unexpected answer ('" + reply + "') to AT+NAME command!");
       else  
         Serial.println(F("Name was set successfully."));
     }
@@ -372,7 +372,7 @@ void changeBAUDRate()
     else
     {
       if (reply.length() < 2 || !reply.substring(0,2).equalsIgnoreCase(F("OK")))
-        Serial.println("Unexpected answer ('" + reply + "') to AT+PIN command!");
+        Serial.println("Unexpected answer ('" + reply + "') to AT+BAUD command!");
       else  
       {
         Serial.println(F("BAUD rate was set successfully. Trying to re-connect with new BAUD rate."));
